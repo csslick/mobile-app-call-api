@@ -5,11 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>App 호출 예제</title>
-  
 </head>
 
-<body>
-  <div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center;">
+<body style="padding: 100px;text-align: center;">
 
     <script>
       var store_url = "http://"
@@ -60,41 +58,18 @@
     <!-- 티맵앱 실행-->
     <a 
       target="_blank"
-      onclick=""
-      href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&amp;name=%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94%28%EC%84%9C%EC%9A%B8%29&amp;lon=127.00517884800654&amp;lat=37.555954592538384">
-      <img
-        src="티맵버튼">티맵
+      href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&name=김포웨딩부페&lon=127.00517884800654&lat=37.555954592538384">
+      <img src="티맵버튼" alt="티맵">
     </a>
-
-
-    <!-- http://kakaonavi-wguide.kakao.com/drive.html?ak=13da3914377346b0b8f74f5309b49dad&ctype=1&lt=37.555954592538384&ln=127.00517884800654&dt=%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94%28%EC%84%9C%EC%9A%B8%29 -->
-    <!-- href="http://kakaonavi-wguide.kakao.com/drive.html?ak=13da3914377346b0b8f74f5309b49dad&ctype=1&lt=37.555954592538384&ln=127.00517884800654&dt=%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94%28%EC%84%9C%EC%9A%B8%29" -->
-    <!-- href="kimgisa://addPOI?coord_type=wgs84&dwflag=N&key=d5c2bdecc9cf4ba8b0001a5b493a2713&pos_x=127.00517884800654&pos_y=37.555954592538384&name=%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94%28%EC%84%9C%EC%9A%B8%29" -->
-
-    <!--
-  <a		target=_blank style="margin-right: 12px;"
-              onclick="return not_for_pc()" 
-        ><img src="./img/130423_06_07.png" height=45 /></a>
-  -->
-
-    <!-- 네이버맵 실행 -->
-    <!-- 웨딩홀 위치: 37.63051549854638, 126.70317278430569 -->
-    <a 
-      href="javascript://"
-      onclick="window.open('//map.naver.com/?menu=location&pinType=place&amp;lat=37.63051549854638&amp;lng=126.70317278430569&title=김포웨딩홀','','width=1156,height=720')">
-      <img
-        src="네이버맵아이콘" alt="네이버맵">
-    </a>
-
 
     <!-- 카카오네비 실행 -->
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <script type="text/javascript">
-      var https = 'on'
+    <script>
       var is_pc = '1'
-      var uid = 'sample134'
+      var app_key = '13da3914377346b0b8f74f5309b49dad'
 
-      Kakao.init('13da3914377346b0b8f74f5309b49dad');
+      Kakao.init(app_key);
+
       function kakao_navi() {
         if (is_pc == '1') {
           alert('모바일 기기 전용 기능입니다')
@@ -108,11 +83,23 @@
       }
     </script>
 
-    <a onclick="kakao_navi();"><img
-        src="./img/map_navi_button-kakao.png" alt="카카오네비"></a>
+    <a onclick="kakao_navi();">
+      <img src="카카오네비아이콘" alt="카카오네비">
+    </a>
 
 
-  </div>
+    <!-- 네이버지도 실행 -->
+    <!-- 웨딩홀 위치: 37.63051549854638, 126.70317278430569 -->
+    <a href="https://map.naver.com/v5/entry/place/12207655?c=14104544.1104998,4527385.6276812,17,0,0,0,dh" target="_blank">
+      <img src="네이버맵아이콘" alt="네이버맵">
+    </a>
+
+
+    <!-- 카카오맵 -->
+    <a href="https://map.kakao.com/?urlX=434483&urlY=1147553&urlLevel=3&itemId=8240125&q=%EA%B9%80%ED%8F%AC%EC%9B%A8%EB%94%A9%ED%99%80%EB%B6%80%ED%8E%98&srcid=8240125&map_type=TYPE_MAP" target="_blank">
+      <img src="카카오맵" alt="카카오맵">
+    </a>
+
 </body>
 
 </html>
